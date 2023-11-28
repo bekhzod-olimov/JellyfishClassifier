@@ -7,7 +7,7 @@ This repository contains a deep learning (DL)-based artificial intelligence (AI)
 1. Clone the repo to your local machine using terminal via the following script:
 
 ```python
-git clone https://github.com/bekhzod-olimov/BrainTumorClassification.git
+git clone https://github.com/bekhzod-olimov/JellyfishClassifier.git
 ```
 
 2. Create conda environment from yml file using the following script:
