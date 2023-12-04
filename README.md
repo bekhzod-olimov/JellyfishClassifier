@@ -25,8 +25,9 @@ python main.py --root PATH_TO_THE_DATA --batch_size = 64 device = "cuda:0"
 ```
 The training parameters can be changed using the following information:
 
-![image](https://github.com/bekhzod-olimov/CT-Brain-Tumor-Classification/assets/50166164/4d5f3ddb-ec9e-49f7-a821-cdb5c8e013ec)
+![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/cc82512f-acc1-4762-9858-f7b870fd8637)
 
 The training process progress:
 
-![image](https://github.com/bekhzod-olimov/CT-Brain-Tumor-Classification/assets/50166164/e03b857e-e80e-47bc-87a7-efecec6b3733)
+![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/ca68a5af-bef1-4b41-9412-648c2f4942c3)
+
