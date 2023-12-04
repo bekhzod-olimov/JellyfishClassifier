@@ -19,7 +19,11 @@ Then activate the environment using the following command:
 conda activate speed
 ```
 
-3. Train the AI model using the following script:
+3. Data Visualization
+
+![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/9b795a3a-b9b6-454a-95af-0581f9ae2cd3)
+
+4. Train the AI model using the following script:
 ```python
 python main.py --root PATH_TO_THE_DATA --batch_size = 64 device = "cuda:0"
 ```
@@ -30,4 +34,8 @@ The training parameters can be changed using the following information:
 The training process progress:
 
 ![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/ca68a5af-bef1-4b41-9412-648c2f4942c3)
+
+4. Train the AI model using the following script:
+
+![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/31b8a8e2-2f9a-4389-8080-c39ae9f2cccc)
 
