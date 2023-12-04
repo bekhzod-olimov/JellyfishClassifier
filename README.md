@@ -40,3 +40,9 @@ The training process progress:
 python inference.py --root PATH_TO_THE_DATA --batch_size = 64 device = "cuda:0"
 ```
 
+The inference progress:
+
+![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/8fee0d75-c43c-4b85-9fcd-9a285a4cdf4a)
+
+
+
