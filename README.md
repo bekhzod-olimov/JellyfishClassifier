@@ -35,7 +35,8 @@ The training process progress:
 
 ![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/ca68a5af-bef1-4b41-9412-648c2f4942c3)
 
-4. Train the AI model using the following script:
-
-![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/31b8a8e2-2f9a-4389-8080-c39ae9f2cccc)
+5. Conduct inference using the trained model:
+```python
+python inference.py --root PATH_TO_THE_DATA --batch_size = 64 device = "cuda:0"
+```
 
