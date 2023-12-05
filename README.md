@@ -35,7 +35,15 @@ The training process progress:
 
 ![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/ca68a5af-bef1-4b41-9412-648c2f4942c3)
 
-5. Conduct inference using the trained model:
+5. Learning curves:
+
+* Train and validation loss curves:
+![loss_learning_curves](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/ab064c7a-39c7-412d-a353-8f6c723a6ea0)
+
+* Train and validation accuracy curves:
+![acc_learning_curves](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/7493c4f3-fc18-443e-8002-5bcd62a12b55)
+
+7. Conduct inference using the trained model:
 ```python
 python inference.py --root PATH_TO_THE_DATA --batch_size = 64 device = "cuda:0"
 ```
