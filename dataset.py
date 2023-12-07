@@ -36,9 +36,11 @@ class CustomDataset(Dataset):
             if class_name not in self.cls_names: self.cls_names[class_name] = count; self.cls_counts[class_name] = 1; count += 1
             # Increase the count of the class if the class is in the dictionary
             else: self.cls_counts[class_name] += 1
-        
-    def get_class(self, path): return os.path.dirname(path).split("/")[-1]
     
+    # Function to get the class name based on the image path        
+    def get_class(self, path): return os.path.dirname(path).split("/")[-1]
+
+    # Function to get the number of images in the dataset
     def __len__(self): return len(self.im_paths)
 
     def __getitem__(self, idx):
