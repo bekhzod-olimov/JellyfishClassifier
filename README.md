@@ -47,7 +47,7 @@ Use [DrawLearningCurves](https://github.com/bekhzod-olimov/JellyfishClassifier/b
   
 ![acc_learning_curves](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/7493c4f3-fc18-443e-8002-5bcd62a12b55)
 
-7. Conduct inference using the trained model:
+6. Conduct inference using the trained model:
 ```python
 python inference.py --root PATH_TO_THE_DATA --batch_size = 64 device = "cuda:0"
 ```
@@ -55,6 +55,11 @@ python inference.py --root PATH_TO_THE_DATA --batch_size = 64 device = "cuda:0"
 The inference progress:
 
 ![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/8fee0d75-c43c-4b85-9fcd-9a285a4cdf4a)
+
+7. Inference Results (Predictions):
+
+![brain_preds](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/9a45fa89-bebd-4f46-a6df-f4bb3474bfd2)
+
 
 
 
