@@ -20,14 +20,21 @@ class CustomDataset(Dataset):
     """
     
     def __init__(self, root, transformations = None):
-        
+
+        # Set the transformations
         self.transformations = transformations
+        # Get the image paths
         self.im_paths = [im_path for im_path in sorted(glob(f"{root}/*/*")) if "jpg" in im_path]
-        
+        # Set the class names, class counts, and other variables
         self.cls_names, self.cls_counts, count, data_count = {}, {}, 0, 0
+        
+        # Go through the image paths
         for idx, im_path in enumerate(self.im_paths):
+            # Get the class name
             class_name = self.get_class(im_path)
+            # Add the class name to the dictionary
             if class_name not in self.cls_names: self.cls_names[class_name] = count; self.cls_counts[class_name] = 1; count += 1
+            # Increase the count of the class if the class is in the dictionary
             else: self.cls_counts[class_name] += 1
         
     def get_class(self, path): return os.path.dirname(path).split("/")[-1]
