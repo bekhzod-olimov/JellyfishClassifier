@@ -1,13 +1,23 @@
 # Import libraries
 import torch, torchvision, os
 from torch.utils.data import random_split, Dataset, DataLoader
-from torch import nn
-from PIL import Image
-from torchvision import transforms as T
-from glob import glob
+from torch import nn; from PIL import Image
+from torchvision import transforms as T; from glob import glob
+# Set the manual seed
 torch.manual_seed(2023)
 
 class CustomDataset(Dataset):
+
+    """
+
+    This class gets several parameters and returns dataset to train an AI model.
+
+    Parameters:
+
+        root             - path to data, str;
+        transformations  - transformations to be applied, torchvision object.    
+    
+    """
     
     def __init__(self, root, transformations = None):
         
