@@ -60,6 +60,6 @@ The inference progress:
 
 ![brain_preds](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/9a45fa89-bebd-4f46-a6df-f4bb3474bfd2)
 
-
-
-
+8. Inference Results (GradCAM):
+   
+![brain_gradcam](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/5327cdc1-72e3-4933-95b8-317779148675)
