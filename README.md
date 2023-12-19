@@ -32,11 +32,17 @@ python main.py --root PATH_TO_THE_DATA --batch_size = 64 device = "cuda:0" --tra
 
 The training parameters can be changed using the following information:
 
-![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/cc82512f-acc1-4762-9858-f7b870fd8637)
+![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/8c95303e-30ba-4854-92c9-2bcc91bc3a8e)
 
 The training process progress:
 
 ![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/ca68a5af-bef1-4b41-9412-648c2f4942c3)
+
+b) PyTorch Lightning training:
+
+```python
+python main.py --root PATH_TO_THE_DATA --batch_size = 64 device = "cuda:0" --train_framework "pl"
+```
 
 5. Learning curves:
    
