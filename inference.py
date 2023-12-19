@@ -31,7 +31,7 @@ def run(args):
     model = timm.create_model(args.model_name, num_classes = len(cls_names)); model.to(args.device)
     # load params
     print("\nLoading the state dictionary...")
-    state_dict = f"{args.save_model_path}/{args.dataset_name}_best_model.pth"
+    state_dict = f"{args.save_model_path}/{args.dataset_name}_best_model_{args.train_framework}.pth"
     model.load_state_dict(torch.load(state_dict, map_location = "cpu"), strict = True)
     print(f"The {args.model_name} state dictionary is successfully loaded!\n")
     all_ims, all_preds, all_gts = get_preds(model, test_dl, args.device)
@@ -46,12 +46,13 @@ if __name__ == "__main__":
     
     # Add arguments to the parser
     parser.add_argument("-is", "--inp_im_size", type = tuple, default = (224, 224), help = "Input image size")
-    parser.add_argument("-dn", "--dataset_name", type = str, default = 'brain', help = "Dataset name for training")
-    parser.add_argument("-mn", "--model_name", type = str, default = 'rexnet_150', help = "Model name for backbone")
-    parser.add_argument("-d", "--device", type = str, default = 'cuda:3', help = "GPU device name")
-    parser.add_argument("-sm", "--save_model_path", type = str, default = 'saved_models', help = "Path to the directory to save a trained model")
+    parser.add_argument("-dn", "--dataset_name", type = str, default = "jellyfish", help = "Dataset name for training")
+    parser.add_argument("-mn", "--model_name", type = str, default = "rexnet_150", help = "Model name for backbone")
+    parser.add_argument("-d", "--device", type = str, default = "cuda:1", help = "GPU device name")
+    parser.add_argument("-sm", "--save_model_path", type = str, default = "saved_models", help = "Path to the directory to save a trained model")
     parser.add_argument("-sp", "--save_path", type = str, default = "results", help = "Path to dir to save inference results")
     parser.add_argument("-dl", "--dls_dir", type = str, default = "saved_dls", help = "Path to dir to save dataloaders")
+    parser.add_argument("-tf", "--train_framework", type = str, default = "pl", help = "Framework to be used for training an AI model")
     
     # Parse the added arguments
     args = parser.parse_args() 
