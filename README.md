@@ -24,9 +24,12 @@ conda activate speed
 ![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/9b795a3a-b9b6-454a-95af-0581f9ae2cd3)
 
 4. Train the AI model using the following script:
+a) PyTorch training:
+
 ```python
-python main.py --root PATH_TO_THE_DATA --batch_size = 64 device = "cuda:0"
+python main.py --root PATH_TO_THE_DATA --batch_size = 64 device = "cuda:0" --train_framework "py"
 ```
+
 The training parameters can be changed using the following information:
 
 ![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/cc82512f-acc1-4762-9858-f7b870fd8637)
