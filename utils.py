@@ -33,7 +33,7 @@ def get_preds(model, test_dl, device):
     all_ims, all_preds, all_gts, acc = [], [], [], 0
     start_time = time()
     for idx, batch in tqdm(enumerate(test_dl)):
-        # if idx == 1: break
+        if idx == 100: break
         ims, gts = batch
         all_ims.extend(ims); all_gts.extend(gts);        
         preds = model(ims.to(device))
