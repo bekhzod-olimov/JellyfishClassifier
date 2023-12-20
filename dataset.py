@@ -45,6 +45,16 @@ class CustomDataset(Dataset):
 
     def __getitem__(self, idx):
         
+        """
+
+        This function gets an index and returns image and gt for the data.
+
+        Parameter:
+
+            idx         - index, int;
+        
+        """
+        
         im_path = self.im_paths[idx]
         im = Image.open(im_path)
         gt = self.cls_names[self.get_class(im_path)]
