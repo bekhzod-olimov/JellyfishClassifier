@@ -51,7 +51,12 @@ class CustomDataset(Dataset):
 
         Parameter:
 
-            idx         - index, int;
+            idx         - index, int.
+
+        Outputs:
+
+            im          - image, tensor;
+            gt          - ground truth label, int.
         
         """
         
