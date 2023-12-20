@@ -73,6 +73,20 @@ class CustomDataset(Dataset):
         return im, gt
 
 def get_dls(root, transformations, bs, split = [0.8, 0.1, 0.1], ns = 4):
+
+    """
+
+    This functions gets several parameters and returns dataloaders for training.
+
+    Parameters:
+
+        root              - path to data, str;
+        transformations   - transformations to be applied, transforms object;
+        bs                - mini batch size, int;
+        split             - split ration for train, validation, and test sets, list -> float;
+        ns                - number of workers, int.
+    
+    """
     
     ds = CustomDataset(root = root, transformations = transformations)
     ds_len = len(ds)
