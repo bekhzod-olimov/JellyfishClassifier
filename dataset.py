@@ -59,11 +59,15 @@ class CustomDataset(Dataset):
             gt          - ground truth label, int.
         
         """
-        
+
+        # Get a specific image path
         im_path = self.im_paths[idx]
-        im = Image.open(im_path)
+        # Read an image and convert it to RGB
+        im = Image.open(im_path).convert("RGB")
+        # Get gt label
         gt = self.cls_names[self.get_class(im_path)]
-        
+
+        # Apply transformations
         if self.transformations is not None: im = self.transformations(im)
         
         return im, gt
