@@ -97,7 +97,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description = 'Image Classification Training Arguments')
     
     # Add arguments to the parser
-    parser.add_argument("-r", "--root", type = str, default = "/mnt/data/dataset/bekhzod/im_class/jellyfish", help = "Path to data")
+    parser.add_argument("-r", "--root", type = str, default = "path/to/data", help = "Path to data")
     parser.add_argument("-bs", "--batch_size", type = int, default = 64, help = "Mini-batch size")
     parser.add_argument("-is", "--inp_im_size", type = tuple, default = (224, 224), help = "Input image size")
     parser.add_argument("-mn", "--model_name", type = str, default = "rexnet_150", help = "Model name for backbone")
@@ -107,7 +107,7 @@ if __name__ == "__main__":
     parser.add_argument("-e", "--epochs", type = int, default = 10, help = "Train epochs number")
     parser.add_argument("-sm", "--save_model_path", type = str, default = 'saved_models', help = "Path to the directory to save a trained model")
     parser.add_argument("-sd", "--stats_dir", type = str, default = "stats", help = "Path to dir to save train statistics")
-    parser.add_argument("-wk", "--wandb_key", type = str, default = "3204eaa1400fed115e40f43c7c6a5d62a0867ed1", help = "Wandb key can be obtained from wandb.ai")
+    parser.add_argument("-wk", "--wandb_key", type = str, default = "api_key", help = "Wandb key can be obtained from wandb.ai")
     parser.add_argument("-dl", "--dls_dir", type = str, default = "saved_dls", help = "Path to dir to save dataloaders")
     parser.add_argument("-tf", "--train_framework", type = str, default = "pl", help = "Framework to be used for training an AI model")
     
