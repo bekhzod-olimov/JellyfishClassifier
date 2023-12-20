@@ -87,13 +87,16 @@ def get_dls(root, transformations, bs, split = [0.8, 0.1, 0.1], ns = 4):
         ns                - number of workers, int.
     
     """
-    
+
+    # Get the dataset based on the parameters
     ds = CustomDataset(root = root, transformations = transformations)
+    # Get the total length of the dataset
     ds_len = len(ds)
+    # Get lengths for train, validation, and test sets 
     tr_len = int(ds_len * split[0]); val_len = int(ds_len * split[1]); ts_len = ds_len - tr_len - val_len
-    
     tr_ds, val_ds, ts_ds = random_split(ds, [tr_len, val_len, ts_len])
-    
+
+    # Create train, validation, and test dataloaders
     tr_dl, val_dl, ts_dl = DataLoader(tr_ds, batch_size = bs, shuffle = True, num_workers = ns), DataLoader(val_ds, batch_size = bs, shuffle = False, num_workers = ns), DataLoader(ts_ds, batch_size = 1, shuffle = False, num_workers = ns)
     
     return tr_dl, val_dl, ts_dl, ds.cls_names
