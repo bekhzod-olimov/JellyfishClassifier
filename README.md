@@ -32,6 +32,17 @@ conda activate speed
 pip install -r requirements.txt
 ```
 
+b) Create a virtual environment using yml file:
+
+```python
+conda env create -f environment.yml
+```
+
+Then activate the environment using the following command:
+```python
+conda activate speed
+```
+
 3. Data Visualization
 
 ![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/9b795a3a-b9b6-454a-95af-0581f9ae2cd3)
