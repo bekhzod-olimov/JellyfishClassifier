@@ -96,3 +96,13 @@ The inference progress:
 8. Inference Results (GradCAM):
    
 ![brain_gradcam](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/5327cdc1-72e3-4933-95b8-317779148675)
+
+9. Run Demo
+
+```python
+streamlit run demo.py
+```
+
+10. [Demo](http://218.38.14.21:8503/): 
+![image](https://github.com/bekhzod-olimov/JellyfishClassifier/assets/50166164/07f6bc8c-8bb6-46f6-b0d4-51c584e86d74)
+
