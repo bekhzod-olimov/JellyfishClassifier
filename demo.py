@@ -83,10 +83,9 @@ def predict(m, path, tfs, cls_names):
     
     """
 
-
-    
-    
+    # Load an image from the given path
     im = Image.open(path).convert("RGB")
+    # Get class names
     cls_names = list(cls_names.keys()) if isinstance(cls_names, dict) else cls_names
     
     return im, cls_names[torch.argmax(m(tfs(im).unsqueeze(0)), dim = 1).item()]
