@@ -32,6 +32,7 @@ def train_setup(model_name, epochs, classes, device, lr = 3e-4):
 # Function to transfer batch components to the pre-defined device
 def to_device(batch, device): return batch[0].to(device), batch[1].to(device)
 
+# Function to get evaluation metrics values
 def get_metrics(model, ims, gts, loss_fn, epoch_loss, epoch_acc): preds = model(ims); loss = loss_fn(preds, gts); return loss, epoch_loss + (loss.item()), epoch_acc + (torch.argmax(preds, dim = 1) == gts).sum().item()
 
 def train(tr_dl, val_dl, m, device, loss_fn, optimizer, epochs, threshold = 0.01, save_dir = "saved_models", save_prefix = "med", train_framework = "py"):
