@@ -93,11 +93,11 @@ def predict(m, path, tfs, cls_names):
 if __name__ == "__main__":
     
     # Initialize argument parser
-    parser = argparse.ArgumentParser(description = 'Object Classification Demo')
+    parser = argparse.ArgumentParser(description = "Imagw Classification Demo Arguments")
     
     # Add arguments
     parser.add_argument("-mn", "--model_name", type = str, default = "rexnet_150", help = "Model name for backbone")
-    parser.add_argument("-cp", "--checkpoint_path", type = str, default = "saved_models/jellyfish_best_model_rexnet_150_pl-v1.ckpt", help = "Path to the checkpoint")
+    parser.add_argument("-cp", "--checkpoint_path", type = str, default = "path/to/pretrained/weights", help = "Path to the checkpoint")
     
     # Parse the arguments
     args = parser.parse_args() 
