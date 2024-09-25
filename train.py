@@ -25,9 +25,11 @@ def train_setup(model_name, epochs, classes, device, lr = 3e-4):
     
     """
     
+    # Initialize model from timm library
     m = timm.create_model(model_name, pretrained = True, num_classes = len(classes))  
     return m.to(device), epochs, device, torch.nn.CrossEntropyLoss(), torch.optim.Adam(params = m.parameters(), lr = lr)
 
+# Function to transfer batch components to the pre-defined device
 def to_device(batch, device): return batch[0].to(device), batch[1].to(device)
 
 def get_metrics(model, ims, gts, loss_fn, epoch_loss, epoch_acc): preds = model(ims); loss = loss_fn(preds, gts); return loss, epoch_loss + (loss.item()), epoch_acc + (torch.argmax(preds, dim = 1) == gts).sum().item()
