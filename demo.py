@@ -1,9 +1,8 @@
 # Import libraries
 import torch, pickle, timm, argparse, streamlit as st
-from transformations import get_tfs  
-from PIL import Image, ImageFont
-from utils import get_state_dict
-from torchvision.datasets import ImageFolder
+from transformations import get_tfs; from PIL import Image, ImageFont
+from utils import get_state_dict; from torchvision.datasets import ImageFolder
+
 # Set the streamlit page config
 st.set_page_config(layout = "wide")
 
