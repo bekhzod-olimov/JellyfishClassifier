@@ -66,6 +66,25 @@ def load_model(model_name, num_classes, checkpoint_path):
     return m.eval()
 
 def predict(m, path, tfs, cls_names):
+
+    """
+    
+    This function gets several parameters and makes prediction using the pre-defined model.
+    
+    Parameters:
+    
+        m               - an AI model, timm model object;
+        path            - path to the pretrained weights, str;
+        tfs             - transformations to be applied, torchvision transforms object;
+        
+    Output:
+    
+        m              - a model with pretrained weights and in an evaluation mode, torch model object;
+    
+    """
+
+
+    
     
     im = Image.open(path).convert("RGB")
     cls_names = list(cls_names.keys()) if isinstance(cls_names, dict) else cls_names
