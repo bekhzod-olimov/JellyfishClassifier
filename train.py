@@ -3,6 +3,17 @@ import os, timm, torch
 from tqdm import tqdm
 
 def train_setup(model_name, epochs, classes, device, lr = 3e-4): 
+
+    """
+    
+    This function gets several arguments and initializes variables for train process.
+
+    Parameters:
+
+    
+    
+    """
+    
     m = timm.create_model(model_name, pretrained = True, num_classes = len(classes))  
     return m.to(device), epochs, device, torch.nn.CrossEntropyLoss(), torch.optim.Adam(params = m.parameters(), lr = lr)
 
