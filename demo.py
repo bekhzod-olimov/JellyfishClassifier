@@ -12,7 +12,7 @@ def run(args):
     
     This function gets parsed arguments and runs the script.
     
-    Parameter:
+    Parameters:
     
         args   - parsed arguments, argparser object;
         
@@ -57,8 +57,10 @@ def load_model(model_name, num_classes, checkpoint_path):
         m              - a model with pretrained weights and in an evaluation mode, torch model object;
     
     """
-    
+
+    # Initialize model to be trained
     m = timm.create_model(model_name, num_classes = num_classes)
+    # Load the pretrained weights
     m.load_state_dict(get_state_dict(args.checkpoint_path))
     
     return m.eval()
