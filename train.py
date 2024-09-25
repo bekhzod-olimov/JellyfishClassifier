@@ -10,6 +10,11 @@ def train_setup(model_name, epochs, classes, device, lr = 3e-4):
 
     Parameters:
 
+    model_name     - name of the model from the timm library, str;
+    epchs          - number of epochs to train the AI model, int;
+    classes        - class names of the dataset to be trained, dict;
+    lr             - learning rate, float.
+
     
     
     """
